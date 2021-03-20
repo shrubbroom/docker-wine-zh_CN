@@ -1,6 +1,5 @@
 FROM ubuntu:focal
 RUN echo "Asia/Shanghai" > /etc/timezone
-RUN rm /etc/localtime
 RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN sed -i 's/security.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN apt update && apt upgrade -y
